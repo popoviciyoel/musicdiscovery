@@ -69,17 +69,17 @@ function RenderSocialIcon({ social }: { social: string | undefined }) {
 export default function Footer({
   logoUrl,
   logoText,
-  menuLinks,
-  categoryLinks,
-  legalLinks,
-  socialLinks,
+  // menuLinks,
+  // categoryLinks,
+  // legalLinks,
+  // socialLinks,
 }: {
   logoUrl: string | null;
   logoText: string | null;
-  menuLinks: Array<FooterLink>;
-  categoryLinks: Array<CategoryLink>;
-  legalLinks: Array<FooterLink>;
-  socialLinks: Array<FooterLink>;
+  // menuLinks: Array<FooterLink>;
+  // categoryLinks: Array<CategoryLink>;
+  // legalLinks: Array<FooterLink>;
+  // socialLinks: Array<FooterLink>;
 }) {
 
   return (
@@ -93,21 +93,21 @@ export default function Footer({
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Categories</p>
+            {/* <p className="pb-1 text-lg font-medium">Categories</p>
             <ul>
               {categoryLinks.map((link: CategoryLink) => (
                 <CategoryLink key={link.id} {...link} />
               ))}
-            </ul>
+            </ul> */}
           </div>
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
-            <p className="pb-1 text-lg font-medium">Menu</p>
+            {/* <p className="pb-1 text-lg font-medium">Menu</p>
             <ul>
               {menuLinks.map((link: FooterLink) => (
                 <FooterLink key={link.id} {...link} />
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
         <div className="grid justify-center pt-6 lg:justify-between">
@@ -115,7 +115,7 @@ export default function Footer({
             <span className="mr-2">
               ©{new Date().getFullYear()} All rights reserved
             </span>
-            <ul className="flex">
+            {/* <ul className="flex">
               {legalLinks.map((link: FooterLink) => (
                 <Link
                   href={link.url}
@@ -125,10 +125,10 @@ export default function Footer({
                   {link.text}
                 </Link>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-            {socialLinks.map((link: FooterLink) => {
+            {/* {socialLinks.map((link: FooterLink) => {
               return (
                 <a
                   key={link.id}
@@ -141,7 +141,7 @@ export default function Footer({
                   <RenderSocialIcon social={link.social} />
                 </a>
               );
-            })}
+            })} */}
           </div>
         </div>
       </div>

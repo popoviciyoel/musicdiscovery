@@ -21,7 +21,7 @@ interface Feature {
 function Feature({ title, description, showLink, newTab, url, text }: Feature) {
   return (
     <div className="flex flex-col items-center p-4">
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -32,7 +32,7 @@ function Feature({ title, description, showLink, newTab, url, text }: Feature) {
           d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
           clipRule="evenodd"
         ></path>
-      </svg>
+      </svg> */}
       <h3 className="my-3 text-3xl font-semibold">{title}</h3>
       <div className="space-y-1 leading-tight my-6">
         <p>{description}</p>

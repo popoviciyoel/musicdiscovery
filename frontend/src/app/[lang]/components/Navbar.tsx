@@ -55,11 +55,11 @@ function MobileNavLink({ url, text, closeMenu }: MobileNavLink) {
 }
 
 export default function Navbar({
-  links,
+  // links,
   logoUrl,
   logoText,
 }: {
-  links: Array<NavLink>;
+  // links: Array<NavLink>;
   logoUrl: string | null;
   logoText: string | null;
 }) {
@@ -74,13 +74,13 @@ export default function Navbar({
           {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
         </Logo>
 
-        <div className="items-center flex-shrink-0 hidden lg:flex">
+        {/* <div className="items-center flex-shrink-0 hidden lg:flex">
           <ul className="items-stretch hidden space-x-3 lg:flex">
             {links.map((item: NavLink) => (
               <NavLink key={item.id} {...item} />
             ))}
           </ul>
-        </div>
+        </div> */}
 
         <Dialog
           as="div"
@@ -106,7 +106,7 @@ export default function Navbar({
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-700">
+              {/* <div className="-my-6 divide-y divide-gray-700">
                 <div className="space-y-2 py-6">
                   {links.map((item) => (
                     <MobileNavLink
@@ -116,7 +116,7 @@ export default function Navbar({
                     />
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </Dialog.Panel>
         </Dialog>

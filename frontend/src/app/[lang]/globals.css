@@ -5,6 +5,9 @@
 
 body {
   @apply dark:bg-black
+  /* bg-gradient-to-b  from-0-light-blue to-[#00002F]
+  text-white */
+
 }
 
 
@@ -114,7 +117,11 @@ body {
 
 /* Images */
 .rich-text img {
-  @apply w-full object-cover rounded-xl my-6;
+  @apply w-full object-cover rounded-xl my-6 ;
+}
+
+img {
+  border-radius: 0.25rem
 }
 
 /* Custom containers */

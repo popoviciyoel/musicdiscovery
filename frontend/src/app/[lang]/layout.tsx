@@ -8,6 +8,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import {FALLBACK_SEO} from "@/app/[lang]/utils/constants";
+import LOGO  from './../../../public/icon.png'
 
 
 async function getGlobal(lang: string): Promise<any> {
@@ -36,22 +37,22 @@ async function getGlobal(lang: string): Promise<any> {
   return await fetchAPI(path, urlParamsObject, options);
 }
 
-export async function generateMetadata({ params } : { params: {lang: string}}): Promise<Metadata> {
-  const meta = await getGlobal(params.lang);
+// export async function generateMetadata({ params } : { params: {lang: string}}): Promise<Metadata> {
+//   const meta = await getGlobal(params.lang);
 
-  if (!meta.data) return FALLBACK_SEO;
+//   if (!meta.data) return FALLBACK_SEO;
 
-  const { metadata, favicon } = meta.data.attributes;
-  const { url } = favicon.data.attributes;
+//   const { metadata, favicon } = meta.data.attributes;
+//   const { url } = favicon.data.attributes;
 
-  return {
-    title: metadata.metaTitle,
-    description: metadata.metaDescription,
-    icons: {
-      icon: [new URL(url, getStrapiURL())],
-    },
-  };
-}
+//   return {
+//     title: metadata.metaTitle,
+//     description: metadata.metaDescription,
+//     icons: {
+//       icon: [],
+//     },
+//   };
+// }
 
 export default async function RootLayout({
   children,
@@ -60,42 +61,42 @@ export default async function RootLayout({
   readonly children: React.ReactNode;
   readonly params: { lang: string };
 }) {
-  const global = await getGlobal(params.lang);
-  // TODO: CREATE A CUSTOM ERROR PAGE
-  if (!global.data) return null;
+  // const global = await getGlobal(params.lang);
+  // // TODO: CREATE A CUSTOM ERROR PAGE
+  // if (!global.data) return null;
   
-  const { notificationBanner, navbar, footer } = global.data.attributes;
+  // const { notificationBanner, navbar, footer } = global.data.attributes;
 
-  const navbarLogoUrl = getStrapiMedia(
-    navbar.navbarLogo.logoImg.data?.attributes.url
-  );
+  // const navbarLogoUrl = getStrapiMedia(
+  //   navbar.navbarLogo.logoImg.data?.attributes.url
+  // );
 
-  const footerLogoUrl = getStrapiMedia(
-    footer.footerLogo.logoImg.data?.attributes.url
-  );
+  // const footerLogoUrl = getStrapiMedia(
+  //   footer.footerLogo.logoImg.data?.attributes.url
+  // );
 
   return (
     <html lang={params.lang}>
       <body>
         <Navbar
-          links={navbar.links}
-          logoUrl={navbarLogoUrl}
-          logoText={navbar.navbarLogo.logoText}
+          // links={navbar.links}
+          logoUrl={LOGO.src}
+          logoText={"Music Discovery"}
         />
 
         <main className="dark:bg-black dark:text-gray-100 min-h-screen">
           {children}
         </main>
 
-        <Banner data={notificationBanner} />
+        {/* <Banner data={notificationBanner} /> */}
 
         <Footer
-          logoUrl={footerLogoUrl}
-          logoText={footer.footerLogo.logoText}
-          menuLinks={footer.menuLinks}
-          categoryLinks={footer.categories.data}
-          legalLinks={footer.legalLinks}
-          socialLinks={footer.socialLinks}
+          logoUrl={LOGO.src}
+          logoText={"Music Discovery"}
+          // menuLinks={footer.menuLinks}
+          // categoryLinks={footer.categories.data}
+          // legalLinks={footer.legalLinks}
+          // socialLinks={footer.socialLinks}
         />
       </body>
     </html>

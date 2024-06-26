@@ -28,13 +28,13 @@ interface HeroProps {
     id: string;
     title: string;
     description: string;
-    picture: Picture;
+    // picture: Picture;
     buttons: Button[];
   };
 }
 
 export default function Hero({ data }: HeroProps) {
-  const imgUrl = getStrapiMedia(data.picture.data.attributes.url);
+  const imgUrl =  null
 
   return (
     <section className="dark:bg-black dark:text-gray-100">
@@ -70,7 +70,7 @@ export default function Hero({ data }: HeroProps) {
           <Image
             src={imgUrl || ""}
             alt={
-              data.picture.data.attributes.alternativeText || "none provided"
+              "none provided"
             }
             className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 "
             width={600}
