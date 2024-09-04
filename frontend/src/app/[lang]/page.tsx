@@ -6,6 +6,12 @@ import Features from "./components/Features";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import Email from "./components/Email";
+import Studio from "./../../../public/Studio.jpg";
+import GuitarPlayer from "./../../../public/GuitarPlayer.jpg";
+import Community from "./../../../public/Community.jpg";
+import Aaron from "./../../../public/Aaron.jpg";
+import Yoel from "./../../../public/Yoel.png";
+import Meherzan from "./../../../public/Meherzan.jpeg";
 
 const testimonials = [
   {
@@ -17,7 +23,7 @@ const testimonials = [
         attributes: {
           name: "Yoel Popovici",
           alternativeText: "",
-          url: "https://firebasestorage.googleapis.com/v0/b/musicdisco-c94e1.appspot.com/o/Screenshot%202024-06-26%20at%205.50.33%20PM.png?alt=media&token=0525fb66-a9bb-4e1b-b7be-7c0bb2ad811c",
+          url: Yoel.src,
         },
       },
     },
@@ -31,7 +37,21 @@ const testimonials = [
         attributes: {
           name: "Aaron Abram",
           alternativeText: "",
-          url: "https://firebasestorage.googleapis.com/v0/b/musicdisco-c94e1.appspot.com/o/Screenshot%202024-06-26%20at%205.16.25%20PM.png?alt=media&token=d8514826-d7db-4418-8174-a3c4fb864301",
+          url: Aaron.src,
+        },
+      },
+    },
+  },
+  {
+    text: "I'm an undergraduate student specializing in machine learning at the University of Maryland. I've been passionate about music for as long as I can remember, playing the piano for over 10 years and creating music since 4th grade. My love for computer science grew through magnet programs in middle and high school, where I dove into algorithms, AI research, and coding languages like Python, Java, and JSX. I also explored mobile app development in high school, learning to build apps with React Native. I'm excited to combine my passions for music and technology in my future endeavors.",
+    authorName: "Meherzan Gai",
+    picture: {
+      data: {
+        id: "picture-3",
+        attributes: {
+          name: "Meherzan Gai",
+          alternativeText: "",
+          url: Meherzan.src,
         },
       },
     },
@@ -41,7 +61,7 @@ const testimonials = [
 const features = [
   {
     id: "feature-1",
-    title: "",
+    title: "1%",
     description:
       "There are over a hundred thousand auditioners for TV music competitions like American Idol, millions more who post on social media channels, and over seven trillion music streams globally on apps like SoundCloud.  Less than 1% of Musical Artists get discovered.  We think this is ridiculous!",
     showLink: false,
@@ -52,7 +72,8 @@ const features = [
   {
     id: "feature-2",
     title: "79.7M",
-    description: "79.7M people failed to recieve more than 10 YTD streams",
+    description:
+      "79.7 million artists on streaming platforms received fewer than 10 streams year-to-date (YTD), highlighting the intense competition and challenges faced by independent musicians. Despite the vast amount of music available, most artists struggle to gain visibility and engagement in an oversaturated market dominated by a small percentage of popular tracks. This statistic underscores the need for more equitable exposure and support for emerging talent",
     showLink: false,
     newTab: false,
     url: "",
@@ -61,7 +82,8 @@ const features = [
   {
     id: "feature-3",
     title: "45.6M",
-    description: "45.6M tracks had zero streams",
+    description:
+      "45.6 million tracks on streaming platforms received zero streams, reflecting the immense challenge of gaining listener attention in a crowded digital music landscape. Despite the sheer volume of music available, many tracks go completely unheard, illustrating the difficulty for artists to reach audiences and the limitations of current discovery mechanisms. This figure highlights the need for better tools and strategies to connect listeners with new and diverse music.",
     showLink: false,
     newTab: false,
     url: "",
@@ -144,12 +166,22 @@ export default async function RootRoute({
             buttons: [
               {
                 id: "1",
-                url: "",
+                url: "https://forms.gle/5MVYFroJywVrrs8k6",
                 text: "JOIN THE WAITLIST",
                 type: "secondary",
                 newTab: false,
               },
             ],
+            picture: {
+              data: {
+                id: "picture-1",
+                attributes: {
+                  url: Studio.src,
+                  name: "Studio",
+                  alternativeText: "",
+                },
+              },
+            },
           }}
         />
         ;
@@ -172,12 +204,22 @@ export default async function RootRoute({
             buttons: [
               {
                 id: "1",
-                url: "",
+                url: "https://forms.gle/5MVYFroJywVrrs8k6",
                 text: "JOIN THE WAITLIST",
                 type: "secondary",
                 newTab: false,
               },
             ],
+            picture: {
+              data: {
+                id: "picture-2",
+                attributes: {
+                  url: Community.src,
+                  name: "Community",
+                  alternativeText: "",
+                },
+              },
+            },
           }}
         />
         ;
@@ -191,12 +233,22 @@ export default async function RootRoute({
             buttons: [
               {
                 id: "1",
-                url: "",
+                url: "https://forms.gle/5MVYFroJywVrrs8k6",
                 text: "JOIN THE WAITLIST",
                 type: "secondary",
                 newTab: false,
               },
             ],
+            picture: {
+              data: {
+                id: "picture-3",
+                attributes: {
+                  url: GuitarPlayer.src,
+                  name: "GuitarPlayer",
+                  alternativeText: "",
+                },
+              },
+            },
           }}
         />
         ;
@@ -228,7 +280,7 @@ export default async function RootRoute({
               "We are launching on December 1st, 2024.  Sign up now to get updates.",
             button: {
               id: "1",
-              url: "",
+              url: "https://forms.gle/5MVYFroJywVrrs8k6",
               text: "JOIN THE WAITLIST",
               type: "secondary",
               newTab: false,
